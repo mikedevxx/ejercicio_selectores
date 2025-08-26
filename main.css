@@ -1,0 +1,75 @@
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem 3rem;
+  border-radius: 1.2rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+form span:has(input:focus) {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+form span:nth-child(2) input {
+  border: 2px dashed #00c6ff;
+}
+
+
+form input:not([type="password"]) {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+
+form input:is([type="text"], [type="password"]) {
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  width: 250px;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+
+form input::placeholder {
+  color: #ccc;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+
+
+form input:focus {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  box-shadow: 0 0 10px #00c6ff;
+  transform: translateY(-2px);
+}
+
+
+form span:where(:nth-child(3)) input {
+  border: 2px solid #ff6ec4;
+}
+
+
+form input:hover {
+  filter: brightness(1.1);
+}
+
+
+form span:last-child input {
+  border: 2px solid #ff9a9e;
+}
